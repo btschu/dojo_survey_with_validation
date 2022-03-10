@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container col-4">
-        <form class="bg-dark mx-auto text-center text-light m-3 p-5 rounded" action="/process" method="post">
+        <form class="bg-dark mx-auto text-center text-light m-3 p-5 rounded" action="/submit" method="post">
             <div class="form-group mx-auto mb-3 text-left pb-5">
                 <h1 class="text-warning pb-3">Dojo Survey</h1>
                 {% with messages = get_flashed_messages() %}
@@ -32,6 +32,7 @@
                     <option value="Online">Online</option>
                 </select>
                 <label for="language" id="language" class="form-label pt-3 text-warning">Favorite Language:</label><br>
+                    <input type="hidden" name = "id" value=""> 
                     <label><input  class="form-check-input" id="349" type="radio" name="language" value="HTML" required> HTML</label><br>
                     <label><input  class="form-check-input" id="349" type="radio" name="language" value="CSS"> CSS</label><br>
                     <label><input  class="form-check-input" id="349" type="radio" name="language" value="Javascript"> JavaScript</label><br>
